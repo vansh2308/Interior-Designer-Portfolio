@@ -5,12 +5,14 @@ import BlackCursor from "../assets/blackcircle.svg"
 import { Boxes } from "../components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
+import Resume from "../assets/resume_sde.pdf"
+import { Button } from "./ui/button";
 
 export function About() {
     const tools = [
         {
             name: "Adobe Photoshop"
-        }, 
+        },
         {
             name: "Illustrator"
         },
@@ -21,7 +23,7 @@ export function About() {
             name: "Autodesk Fusion 360"
         },
         {
-             name: "AutoCAD"
+            name: "AutoCAD"
         }
     ]
 
@@ -38,13 +40,17 @@ export function About() {
                 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
             </p>
 
+            <a href={Resume} download>
+                <Button variant={'secondary'} className="relative mt-7 z-20" onMouseOver={(e) => e.stopPropagation()}> Download Resume </Button>
+            </a>
+
 
 
             <InfiniteMovingCards
                 items={tools}
                 direction="right"
                 speed="slow"
-                className="mt-28"
+                className="mt-36"
             />
             <InfiniteMovingCards
                 items={tools}

@@ -7,7 +7,6 @@ import React, { useEffect, useRef, useState } from "react"
 // import { FaGithub } from "react-icons/fa6";
 
 import projectThumbnail from "../assets/hero.png"
-import { wrap } from "module"
 
 interface Project {
     thumbnail: string,
@@ -66,7 +65,7 @@ export default function ProjectsContainer(){
             {/* bilateral scroller  */}
             <div className="p-20 pt-40 overflow-x-visible flex sticky top-0 items-stretch max-[850px]:p-5" ref={locomotiveRef}>
                 {
-                    [...Array(27).keys()].map((key) => {
+                    [...Array(28).keys()].map((key) => {
                         return(
                             <ProjectTile  key={key} project={ projectList[key%projectList.length] }/>
                         )
@@ -82,14 +81,14 @@ export default function ProjectsContainer(){
 
 function ProjectTile( {key, project} : {key: number, project: Project} ) {
     return (
-        <div className="project-container bg-white text-black border-3 border-white min-h-fit  rounded-xl  grow self-stretch">
+        <div className="project-container min-w-[20rem] bg-white text-black border-3 border-white min-h-fit  rounded-xl  grow self-stretch">
 
             <div className="w-full aspect-square overflow-hidden flex justify-center items-center">
                 <img src = {project.thumbnail} alt="thummbnail" className="size-full object-cover" />
             </div>
 
             <div className="p-5 flex flex-col gap-2 max-h-full">
-                <h4 className=" text-xl font-semibold max-h-min text-wrap overflow-hidden"> {project.name} </h4>
+                <h4 className=" text-2xl font-semibold max-h-min text-wrap overflow-hidden"> {project.name} </h4>
                 {/* <div className="flex justify-between items-center mb-4">
                     <h5 className="text-xs font-medium">Python C++</h5>
                     <div className="flex gap-2 text-lg items-center">

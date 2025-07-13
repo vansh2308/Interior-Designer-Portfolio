@@ -3,6 +3,7 @@ import Hero from "./components/Hero"
 import { About } from "./components/About"
 import { Experience } from "./components/Experience"
 import ProjectsContainer from "./components/Projects"
+import { Footer } from "./components/Footer"
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <About />
       <Experience />
       <ProjectsContainer />
-      <section className="w-screen h-screen bg-white" />
+      <Footer />
+
     </div>
   )
 }
