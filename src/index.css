@@ -120,13 +120,13 @@
 }
 
 html, body, *, button, a, input, .disabled, a:disabled, input:disabled {
+
   cursor: url('/src/assets/blackcircle.svg'), auto;
 }
 
 button:hover, a:hover, input:hover, .hover:hover{
   cursor: url('/src/assets/whitecircle.svg'), auto;
 }
-
 
 
 
@@ -142,3 +142,23 @@ button:hover, a:hover, input:hover, .hover:hover{
 
 
 
+.project-container {
+  /* width: 50%; */
+  flex-grow: 1;
+  margin-left: 40px;
+  overflow: hidden;
+  align-self: stretch;
+}
+
+.project-container:last-child{
+  margin-right: 50px;
+}
+
+/* .project-container:hover img{
+  mix-blend-mode: normal;
+}
+
+.project-container img{
+  transition: all 1s ease-in;
+  -webkit-transition: all 1s ease-in;
+} */

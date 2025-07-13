@@ -1,6 +1,9 @@
 
 import type React from 'react'
 import HeroImg from '../assets/hero.png' 
+import HeroImg2 from '../assets/hero2.png' 
+import Trial1 from "../assets/trial1.jpg"
+import Trial2 from "../assets/trial2.jpg"
 import { useAnimation, motion } from "framer-motion"
 
 export default function Hero() {
@@ -23,7 +26,7 @@ export default function Hero() {
             <motion.img
                 animate={imgAnimation}
                 onMouseMove={(e: React.MouseEvent) => handleMouseMove(e)}
-                src={HeroImg}
+                src={HeroImg2}
                 className="min-w-[110%] min-h-[110%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-auto"
                 alt="Woman in a red dress"
             />
