@@ -127,8 +127,18 @@ button:hover, a:hover, input:hover, .hover:hover{
   cursor: url('/src/assets/whitecircle.svg'), auto;
 }
 
-/* button:focus, a:focus, input:focus, .focus:focus {
-  /* cursor: url('/redcircle.svg'), auto; */
-/* } */ 
+
+
+
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
 
 
