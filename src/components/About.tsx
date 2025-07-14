@@ -1,7 +1,4 @@
 
-import React from "react";
-import WhiteCursor from "../assets/whitecircle.svg"
-import BlackCursor from "../assets/blackcircle.svg"
 import { Boxes } from "../components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
@@ -29,7 +26,7 @@ export function About() {
 
 
     return (
-        <div className={`about h-max min-h-screen relative w-full overflow-hidden bg-black flex flex-col items-center justify-center cursor-[url(${WhiteCursor}),_pointer] py-28`}>
+        <div className={`about h-max min-h-screen relative w-full overflow-hidden bg-black flex flex-col items-center justify-center py-28`}>
             <div className="absolute inset-0 w-full h-full bg-black z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none " />
 
             <Boxes />

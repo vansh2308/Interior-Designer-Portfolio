@@ -124,7 +124,7 @@ html, body, *, button, a, input, .disabled, a:disabled, input:disabled {
   cursor: url('/src/assets/blackcircle.svg'), auto;
 }
 
-button:hover, a:hover, input:hover, .hover:hover{
+button:hover, a:hover, input:hover, .hover:hover, .about{
   cursor: url('/src/assets/whitecircle.svg'), auto;
 }
 

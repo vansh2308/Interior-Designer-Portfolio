@@ -1,9 +1,9 @@
 
 import type React from 'react'
-import HeroImg from '../assets/hero.png' 
+// import HeroImg from '../assets/hero.png' 
 import HeroImg2 from '../assets/hero2.png' 
-import Trial1 from "../assets/trial1.jpg"
-import Trial2 from "../assets/trial2.jpg"
+// import Trial1 from "../assets/trial1.jpg"
+// import Trial2 from "../assets/trial2.jpg"
 import { useAnimation, motion } from "framer-motion"
 
 export default function Hero() {

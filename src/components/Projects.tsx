@@ -1,6 +1,6 @@
 
 
-import React, { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 
 
 // import { FaLink } from "react-icons/fa6";
@@ -32,13 +32,13 @@ const projectList = [
 
 export default function ProjectsContainer(){
     const ratio = 0.4    // y to x scroll ratio
-    const wrapperRef = useRef(null)
-    const locomotiveRef = useRef(null)
-    let distanceFromTop: null | number = null
+    const wrapperRef = useRef<HTMLDivElement>(null)
+    const locomotiveRef = useRef<HTMLDivElement>(null)
+    let distanceFromTop: undefined | number | null = null
 
-    const handleScroll = (e: Event) => {
+    const handleScroll = (_e: Event) => {
         if(distanceFromTop && window.scrollY >= distanceFromTop ){
-            locomotiveRef.current.style.transform = `translateX(-${window.scrollY - distanceFromTop}px)`
+            locomotiveRef!.current!.style.transform = `translateX(-${window.scrollY - distanceFromTop}px)`
         }
     }
 
@@ -46,7 +46,7 @@ export default function ProjectsContainer(){
         if(locomotiveRef && locomotiveRef.current) {
             let verScrollDistance: number = locomotiveRef?.current?.clientWidth / ratio
             distanceFromTop = wrapperRef?.current?.getBoundingClientRect().top
-            wrapperRef.current.style.height = `${verScrollDistance*2}px` 
+            wrapperRef!.current!.style.height = `${verScrollDistance*2}px` 
         }
 
         
@@ -67,7 +67,7 @@ export default function ProjectsContainer(){
                 {
                     [...Array(28).keys()].map((key) => {
                         return(
-                            <ProjectTile  key={key} project={ projectList[key%projectList.length] }/>
+                            <ProjectTile project={ projectList[key%projectList.length] }/>
                         )
                     })
                 }
@@ -79,7 +79,7 @@ export default function ProjectsContainer(){
 
 
 
-function ProjectTile( {key, project} : {key: number, project: Project} ) {
+function ProjectTile( {project} : {project: Project} ) {
     return (
         <div className="project-container min-w-[20rem] bg-white text-black border-3 border-white min-h-fit  rounded-xl  grow self-stretch">
 
