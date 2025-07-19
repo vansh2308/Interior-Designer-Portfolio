@@ -47,7 +47,7 @@ export default function Hero() {
                     animate={{ opacity: 1 }}
                     transition={{ ease: "easeOut", duration: 2 }}
                 > 
-                    Vanshika Agarwal 
+                    Vanshika 
                 </motion.h2>
             </div>
 
